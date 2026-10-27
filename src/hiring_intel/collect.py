@@ -100,7 +100,7 @@ def collect(config_path: Path = CONFIG, out_dir: Path = DATA) -> pd.DataFrame:
     processed = out_dir / "processed"
     processed.mkdir(parents=True, exist_ok=True)
     out_file = processed / f"jobs_{today}.csv"
-    df.to_csv(out_file, index=False, encoding="utf-8")
+    df.to_csv(out_file, index=False)
 
     with_salary = df["salary_min"].notna().sum()
     log.info("Saved %d jobs (%d with salary, %d in Bay Area) to %s",
