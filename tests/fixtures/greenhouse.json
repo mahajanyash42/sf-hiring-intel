@@ -1,0 +1,25 @@
+{
+  "jobs": [
+    {
+      "id": 4001,
+      "title": "Forward Deployed Engineer",
+      "updated_at": "2026-10-21T09:00:00-04:00",
+      "first_published": "2026-10-15T09:00:00-04:00",
+      "location": {"name": "San Francisco, CA"},
+      "absolute_url": "https://job-boards.greenhouse.io/acme/jobs/4001",
+      "content": "&lt;p&gt;Work with customers on &lt;strong&gt;messy data&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Salary: $160K&amp;nbsp;–&amp;nbsp;$210K per year&lt;/p&gt;",
+      "departments": [{"id": 1, "name": "Engineering"}],
+      "offices": [{"id": 2, "name": "SF"}]
+    },
+    {
+      "id": 4002,
+      "title": "Support Specialist",
+      "updated_at": "2026-10-21T09:00:00-04:00",
+      "location": {"name": "Austin, TX"},
+      "absolute_url": "https://job-boards.greenhouse.io/acme/jobs/4002",
+      "content": "&lt;p&gt;Hourly rate $25 - $30.&lt;/p&gt;",
+      "departments": []
+    }
+  ],
+  "meta": {"total": 2}
+}

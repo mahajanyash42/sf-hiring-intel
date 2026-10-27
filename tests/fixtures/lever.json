@@ -1,0 +1,31 @@
+[
+  {
+    "id": "l1",
+    "text": "AI Engineer",
+    "categories": {
+      "commitment": "Full-time",
+      "department": "Engineering",
+      "location": "Palo Alto, CA",
+      "team": "Applied AI",
+      "allLocations": ["Palo Alto, CA"]
+    },
+    "createdAt": 1761000000000,
+    "hostedUrl": "https://jobs.lever.co/acme/l1",
+    "descriptionPlain": "Ship LLM features to production.",
+    "lists": [{"text": "Requirements", "content": "<li>Python</li><li>FastAPI</li>"}],
+    "additionalPlain": "We offer great benefits.",
+    "workplaceType": "onsite",
+    "salaryRange": {"min": 170000, "max": 220000, "currency": "USD", "interval": "per-year-salary"}
+  },
+  {
+    "id": "l2",
+    "text": "Analytics Engineer",
+    "categories": {"commitment": "Full-time", "team": "Data", "location": "Remote"},
+    "createdAt": 1761100000000,
+    "hostedUrl": "https://jobs.lever.co/acme/l2",
+    "descriptionPlain": "dbt and SQL.",
+    "lists": [],
+    "additionalPlain": "Pay range: $140k to $175k.",
+    "workplaceType": "remote"
+  }
+]

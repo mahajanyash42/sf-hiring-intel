@@ -1,0 +1,45 @@
+{
+  "apiVersion": "1",
+  "jobs": [
+    {
+      "id": "a1",
+      "title": "Machine Learning Engineer",
+      "department": "Engineering",
+      "team": "ML Platform",
+      "employmentType": "FullTime",
+      "location": "San Francisco",
+      "secondaryLocations": [{"location": "New York"}],
+      "isRemote": false,
+      "workplaceType": "Hybrid",
+      "isListed": true,
+      "publishedAt": "2026-10-20T17:00:00.000+00:00",
+      "jobUrl": "https://jobs.ashbyhq.com/acme/a1",
+      "descriptionPlain": "Build training pipelines in Python and PyTorch. Deploy with Docker and Kubernetes.",
+      "compensation": {
+        "compensationTierSummary": "$180K – $240K • Offers Equity",
+        "summaryComponents": [
+          {"compensationType": "EquityPercentage", "minValue": 0.01, "maxValue": 0.05},
+          {"compensationType": "Salary", "interval": "1 YEAR", "currencyCode": "USD", "minValue": 180000, "maxValue": 240000}
+        ]
+      }
+    },
+    {
+      "id": "a2",
+      "title": "Data Scientist",
+      "department": "Data",
+      "employmentType": "FullTime",
+      "location": "Remote (US)",
+      "isRemote": true,
+      "isListed": true,
+      "publishedAt": "2026-10-22T12:00:00.000+00:00",
+      "jobUrl": "https://jobs.ashbyhq.com/acme/a2",
+      "descriptionPlain": "SQL and experimentation. The base pay range is $150,000 - $190,000.",
+      "compensation": {"summaryComponents": []}
+    },
+    {
+      "id": "a3",
+      "title": "Hidden role",
+      "isListed": false
+    }
+  ]
+}

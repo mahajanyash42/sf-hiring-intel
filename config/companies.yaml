@@ -1,0 +1,28 @@
+# Companies to collect, grouped by hiring platform.
+# The slug is the last part of the company's careers URL:
+#   jobs.ashbyhq.com/<slug>   boards.greenhouse.io/<slug>   jobs.lever.co/<slug>
+#
+# Don't know which platform a company uses? Run:
+#   python -m hiring_intel.collect --discover <slug> <slug> ...
+#
+# Goal: grow this to 100+ Bay Area startups. Good places to find them:
+# the YC company directory (filter: San Francisco Bay Area, hiring).
+
+ashby:
+  - openai
+  - ramp
+  - notion
+  - linear
+  - supabase
+  - langchain
+  - posthog
+  - deel
+
+greenhouse:
+  - airbnb
+  - stripe
+  - figma
+  - databricks
+
+lever:
+  - palantir
