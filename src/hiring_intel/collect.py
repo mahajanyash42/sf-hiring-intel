@@ -73,7 +73,7 @@ def discover(slugs: list[str]) -> None:
 
 
 def collect(config_path: Path = CONFIG, out_dir: Path = DATA) -> pd.DataFrame:
-    companies = yaml.safe_load(config_path.read_text())
+    companies = yaml.safe_load(config_path.read_text(encoding="utf-8"))
     today = date.today().isoformat()
     raw_dir = out_dir / "raw" / today
     raw_dir.mkdir(parents=True, exist_ok=True)
@@ -88,7 +88,7 @@ def collect(config_path: Path = CONFIG, out_dir: Path = DATA) -> pd.DataFrame:
             if payload is None:
                 failures.append(f"{source}/{slug}")
                 continue
-            (raw_dir / f"{source}__{slug}.json").write_text(json.dumps(payload))
+            (raw_dir / f"{source}__{slug}.json").write_text(json.dumps(payload), encoding="utf-8")
             new_rows = NORMALIZERS[source](payload, slug)
             log.info("%-10s %-20s %4d jobs", source, slug, len(new_rows))
             rows.extend(new_rows)
@@ -100,7 +100,7 @@ def collect(config_path: Path = CONFIG, out_dir: Path = DATA) -> pd.DataFrame:
     processed = out_dir / "processed"
     processed.mkdir(parents=True, exist_ok=True)
     out_file = processed / f"jobs_{today}.csv"
-    df.to_csv(out_file, index=False)
+    df.to_csv(out_file, index=False, encoding="utf-8")
 
     with_salary = df["salary_min"].notna().sum()
     log.info("Saved %d jobs (%d with salary, %d in Bay Area) to %s",

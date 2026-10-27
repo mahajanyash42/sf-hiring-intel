@@ -9,12 +9,12 @@ FIXTURES = Path(__file__).parent / "fixtures"
 def test_collect_end_to_end(tmp_path, monkeypatch):
     """Run the full collector with fake API responses and check the output files."""
     config = tmp_path / "companies.yaml"
-    config.write_text("ashby: [acme]\ngreenhouse: [acme]\nlever: [acme, missingco]\n")
+    config.write_text("ashby: [acme]\ngreenhouse: [acme]\nlever: [acme, missingco]\n", encoding="utf-8")
 
     def fake_fetch(source, slug, session, retries=3):
         if slug == "missingco":
             return None
-        return json.loads((FIXTURES / f"{source}.json").read_text())
+        return json.loads((FIXTURES / f"{source}.json").read_text(encoding="utf-8"))
 
     monkeypatch.setattr(collect_mod, "fetch", fake_fetch)
     monkeypatch.setattr(collect_mod, "DELAY_SECONDS", 0)
